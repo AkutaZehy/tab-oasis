@@ -1,0 +1,598 @@
+{
+  "appName": {
+    "message": "Tab Oasis",
+    "description": "扩展名称"
+  },
+  "appDesc": {
+    "message": "Firefox 标签页管理扩展",
+    "description": "扩展描述"
+  },
+  "action_title": {
+    "message": "Tab Oasis",
+    "description": "浏览器按钮提示"
+  },
+  "sidebar_name": {
+    "message": "Tab Oasis",
+    "description": "侧边栏面板标题"
+  },
+  "tabAction_saveAll": {
+    "message": "保存全部",
+    "description": "保存全部标签页按钮"
+  },
+  "tabAction_saveAllDesc": {
+    "message": "保存并关闭所有标签页",
+    "description": "保存全部标签页提示说明"
+  },
+  "tabAction_saveCurrent": {
+    "message": "保存当前",
+    "description": "保存当前标签页按钮"
+  },
+  "tabAction_restore": {
+    "message": "恢复",
+    "description": "恢复已保存的标签页"
+  },
+  "tabAction_restoreAll": {
+    "message": "恢复全部",
+    "description": "恢复全部已保存的标签页"
+  },
+  "tabAction_restoreToNewWindow": {
+    "message": "新窗口",
+    "description": "在新窗口中恢复标签页"
+  },
+  "tabAction_remove": {
+    "message": "移除",
+    "description": "移除已保存的标签页"
+  },
+  "tabAction_close": {
+    "message": "关闭",
+    "description": "关闭操作"
+  },
+  "tabAction_open": {
+    "message": "打开",
+    "description": "打开已保存的标签页"
+  },
+  "tabAction_copyUrl": {
+    "message": "复制链接",
+    "description": "复制标签页链接到剪贴板"
+  },
+  "tabAction_noTabs": {
+    "message": "暂无保存",
+    "description": "无标签页保存时的空状态"
+  },
+  "tabAction_clear": {
+    "message": "清空",
+    "description": "清空全部已保存标签页"
+  },
+  "groupAction_create": {
+    "message": "新建分组",
+    "description": "创建新标签页分组"
+  },
+  "groupAction_rename": {
+    "message": "重命名",
+    "description": "重命名分组"
+  },
+  "groupAction_delete": {
+    "message": "删除",
+    "description": "删除分组"
+  },
+  "groupAction_deleteConfirm": {
+    "message": "确定删除此分组？",
+    "description": "删除分组确认提示"
+  },
+  "groupAction_pin": {
+    "message": "置顶",
+    "description": "置顶分组"
+  },
+  "groupAction_unpin": {
+    "message": "取消置顶",
+    "description": "取消分组置顶"
+  },
+  "groupAction_lock": {
+    "message": "锁定",
+    "description": "锁定分组"
+  },
+  "groupAction_unlock": {
+    "message": "取消锁定",
+    "description": "解锁分组"
+  },
+  "groupAction_autoGroup": {
+    "message": "自动分组",
+    "description": "自动分组标签页"
+  },
+  "groupAction_noGroups": {
+    "message": "暂无分组",
+    "description": "无分组时的空状态"
+  },
+  "groupAction_ungrouped": {
+    "message": "未分组",
+    "description": "未分组的标签页标签"
+  },
+  "groupAction_expand": {
+    "message": "展开",
+    "description": "展开分组"
+  },
+  "groupAction_collapse": {
+    "message": "折叠",
+    "description": "折叠分组"
+  },
+  "quickLink_sectionTitle": {
+    "message": "快捷链接",
+    "description": "快捷链接区域标题"
+  },
+  "quickLink_add": {
+    "message": "添加链接",
+    "description": "添加新的快捷链接"
+  },
+  "quickLink_edit": {
+    "message": "编辑",
+    "description": "编辑快捷链接"
+  },
+  "quickLink_titleLabel": {
+    "message": "标题",
+    "description": "快捷链接标题字段标签"
+  },
+  "quickLink_urlLabel": {
+    "message": "链接",
+    "description": "快捷链接 URL 字段标签"
+  },
+  "quickLink_urlPlaceholder": {
+    "message": "https://example.com",
+    "description": "快捷链接 URL 输入占位符"
+  },
+  "quickLink_noLinks": {
+    "message": "暂无快捷链接",
+    "description": "无快捷链接时的空状态"
+  },
+  "quickLink_titlePlaceholder": {
+    "message": "标题...",
+    "description": "快捷链接标题输入占位符"
+  },
+  "readingList_sectionTitle": {
+    "message": "待读列表",
+    "description": "待读列表区域标题"
+  },
+  "readingList_add": {
+    "message": "添加",
+    "description": "添加项目到待读列表"
+  },
+  "readingList_notes": {
+    "message": "笔记",
+    "description": "待读列表笔记标签"
+  },
+  "readingList_notesPlaceholder": {
+    "message": "添加笔记...",
+    "description": "待读列表笔记输入占位符"
+  },
+  "readingList_archive": {
+    "message": "归档",
+    "description": "归档待读列表项目"
+  },
+  "readingList_unarchive": {
+    "message": "取消归档",
+    "description": "取消归档待读列表项目"
+  },
+  "readingList_showArchived": {
+    "message": "显示归档",
+    "description": "切换显示已归档项目"
+  },
+  "readingList_noItems": {
+    "message": "暂无项目",
+    "description": "待读列表为空时的空状态"
+  },
+  "readingList_archived": {
+    "message": "已归档",
+    "description": "已归档项目标签"
+  },
+  "readingList_markRead": {
+    "message": "标记已读",
+    "description": "标记待读项目为已读"
+  },
+  "todo_sectionTitle": {
+    "message": "待办",
+    "description": "待办事项区域标题"
+  },
+  "todo_addPlaceholder": {
+    "message": "添加待办...",
+    "description": "新建待办事项输入占位符"
+  },
+  "todo_clearCompleted": {
+    "message": "清除已完成",
+    "description": "清除已完成的待办事项"
+  },
+  "todo_noTodos": {
+    "message": "暂无待办",
+    "description": "无待办事项时的空状态"
+  },
+  "todo_completed": {
+    "message": "已完成",
+    "description": "已完成待办事项的标签"
+  },
+  "search_placeholder": {
+    "message": "搜索标签页...",
+    "description": "搜索输入占位符"
+  },
+  "search_noResults": {
+    "message": "无结果",
+    "description": "搜索无结果时的提示"
+  },
+  "search_allSections": {
+    "message": "全部",
+    "description": "搜索筛选：全部区域"
+  },
+  "search_filterTabs": {
+    "message": "标签页",
+    "description": "搜索筛选：标签页"
+  },
+  "search_filterGroups": {
+    "message": "分组",
+    "description": "搜索筛选：分组"
+  },
+  "search_filterLinks": {
+    "message": "链接",
+    "description": "搜索筛选：链接"
+  },
+  "search_filterReading": {
+    "message": "待读",
+    "description": "搜索筛选：待读列表"
+  },
+  "search_filterTodos": {
+    "message": "待办",
+    "description": "搜索筛选：待办事项"
+  },
+  "theme_label": {
+    "message": "主题",
+    "description": "主题设置标签"
+  },
+  "theme_light": {
+    "message": "浅色",
+    "description": "浅色主题选项"
+  },
+  "theme_dark": {
+    "message": "深色",
+    "description": "深色主题选项"
+  },
+  "theme_system": {
+    "message": "跟随系统",
+    "description": "跟随系统主题选项"
+  },
+  "sync_label": {
+    "message": "云同步",
+    "description": "同步功能区域标签"
+  },
+  "sync_description": {
+    "message": "通过 Gist 同步数据",
+    "description": "同步功能描述"
+  },
+  "sync_platform": {
+    "message": "平台",
+    "description": "同步平台选择标签"
+  },
+  "sync_token": {
+    "message": "令牌",
+    "description": "同步令牌标签"
+  },
+  "sync_tokenPlaceholder": {
+    "message": "输入访问令牌",
+    "description": "令牌输入占位符"
+  },
+  "sync_tokenHint": {
+    "message": "创建具有 gist 权限的令牌",
+    "description": "创建同步令牌的提示"
+  },
+  "sync_syncNow": {
+    "message": "立即同步",
+    "description": "手动触发同步按钮"
+  },
+  "sync_syncing": {
+    "message": "同步中...",
+    "description": "同步进行中的状态文本"
+  },
+  "sync_syncSuccess": {
+    "message": "同步完成",
+    "description": "同步成功后的状态文本"
+  },
+  "sync_syncError": {
+    "message": "同步失败",
+    "description": "同步失败后的状态文本"
+  },
+  "sync_autoSync": {
+    "message": "自动同步",
+    "description": "自动同步开关"
+  },
+  "sync_interval": {
+    "message": "间隔",
+    "description": "同步间隔设置标签"
+  },
+  "sync_interval5min": {
+    "message": "5分钟",
+    "description": "5分钟同步间隔选项"
+  },
+  "sync_interval15min": {
+    "message": "15分钟",
+    "description": "15分钟同步间隔选项"
+  },
+  "sync_interval30min": {
+    "message": "30分钟",
+    "description": "30分钟同步间隔选项"
+  },
+  "sync_interval1hr": {
+    "message": "1小时",
+    "description": "1小时同步间隔选项"
+  },
+  "sync_lastSync": {
+    "message": "上次同步：",
+    "description": "上次同步时间标签"
+  },
+  "sync_never": {
+    "message": "从未",
+    "description": "从未同步过的显示文本"
+  },
+  "sync_configureFirst": {
+    "message": "请先配置",
+    "description": "请先配置同步设置的提示"
+  },
+  "sync_disconnect": {
+    "message": "断开连接",
+    "description": "断开同步连接按钮"
+  },
+  "sync_gistId": {
+    "message": "Gist ID",
+    "description": "Gist ID 显示标签"
+  },
+  "sync_save": {
+    "message": "保存令牌",
+    "description": "保存同步令牌按钮"
+  },
+  "sync_load": {
+    "message": "读取令牌",
+    "description": "读取已保存的同步令牌按钮"
+  },
+  "sync_push": {
+    "message": "推送到云",
+    "description": "推送数据到 Gist"
+  },
+  "sync_pull": {
+    "message": "从云拉取",
+    "description": "从 Gist 拉取数据"
+  },
+  "importExport_label": {
+    "message": "导入 / 导出",
+    "description": "导入导出功能区域标签"
+  },
+  "importExport_exportJson": {
+    "message": "导出为JSON",
+    "description": "导出数据为 JSON"
+  },
+  "importExport_exportHtml": {
+    "message": "导出为HTML",
+    "description": "导出为 HTML 书签"
+  },
+  "importExport_importFile": {
+    "message": "导入文件",
+    "description": "从文件导入数据"
+  },
+  "importExport_importJson": {
+    "message": "从JSON导入",
+    "description": "从 JSON 导入数据"
+  },
+  "importExport_importHtml": {
+    "message": "导入 HTML",
+    "description": "从 HTML 导入数据"
+  },
+  "importExport_importing": {
+    "message": "导入中...",
+    "description": "导入进行中的状态文本"
+  },
+  "importExport_importSuccess": {
+    "message": "导入完成",
+    "description": "导入成功后的状态文本"
+  },
+  "importExport_importError": {
+    "message": "导入失败",
+    "description": "导入失败后的状态文本"
+  },
+  "importExport_mergeQuestion": {
+    "message": "合并还是替换？",
+    "description": "询问合并还是替换数据的提示"
+  },
+  "importExport_merge": {
+    "message": "合并",
+    "description": "合并导入选项"
+  },
+  "importExport_replace": {
+    "message": "替换",
+    "description": "替换导入选项"
+  },
+  "recycle_label": {
+    "message": "回收站",
+    "description": "回收站功能区域标签"
+  },
+  "recycle_restore": {
+    "message": "恢复",
+    "description": "从回收站恢复项目"
+  },
+  "recycle_deletePermanent": {
+    "message": "永久删除",
+    "description": "从回收站永久删除项目"
+  },
+  "recycle_empty": {
+    "message": "清空全部",
+    "description": "清空整个回收站"
+  },
+  "recycle_emptyConfirm": {
+    "message": "确定删除全部？",
+    "description": "清空回收站前的确认提示"
+  },
+  "recycle_daysRemaining": {
+    "message": "天后清除",
+    "description": "自动删除前剩余天数"
+  },
+  "recycle_noItems": {
+    "message": "回收站为空",
+    "description": "回收站为空时的空状态"
+  },
+  "recycle_itemType_tab": {
+    "message": "标签页",
+    "description": "回收站项目类型：标签页"
+  },
+  "recycle_itemType_group": {
+    "message": "分组",
+    "description": "回收站项目类型：分组"
+  },
+  "recycle_itemType_link": {
+    "message": "链接",
+    "description": "回收站项目类型：链接"
+  },
+  "recycle_itemType_reading": {
+    "message": "待读",
+    "description": "回收站项目类型：待读"
+  },
+  "recycle_itemType_todo": {
+    "message": "待办",
+    "description": "回收站项目类型：待办"
+  },
+  "recycle_restored": {
+    "message": "已恢复",
+    "description": "恢复项目后的通知文本"
+  },
+  "recycle_deleted": {
+    "message": "已删除",
+    "description": "删除项目后的通知文本"
+  },
+  "recycle_back": {
+    "message": "返回",
+    "description": "从回收站返回的按钮"
+  },
+  "dedup_label": {
+    "message": "去重",
+    "description": "重复检测功能标签"
+  },
+  "dedup_found": {
+    "message": "发现 {count} 个重复",
+    "description": "发现重复项目的数量"
+  },
+  "dedup_removed": {
+    "message": "已移除 {count} 个",
+    "description": "已移除重复项目的数量"
+  },
+  "dedup_none": {
+    "message": "无重复",
+    "description": "未发现重复项目时的提示"
+  },
+  "settings_label": {
+    "message": "设置",
+    "description": "设置功能区域标签"
+  },
+  "settings_general": {
+    "message": "常规",
+    "description": "常规设置选项卡"
+  },
+  "settings_keyboardShortcuts": {
+    "message": "快捷键",
+    "description": "快捷键设置选项卡"
+  },
+  "settings_data": {
+    "message": "数据",
+    "description": "数据设置选项卡"
+  },
+  "settings_about": {
+    "message": "关于",
+    "description": "关于设置选项卡"
+  },
+  "settings_newTabMode": {
+    "message": "新标签页模式",
+    "description": "新标签页行为设置"
+  },
+  "settings_closeAfterSave": {
+    "message": "保存后关闭",
+    "description": "保存后关闭标签页的设置"
+  },
+  "settings_language": {
+    "message": "语言",
+    "description": "语言设置标签"
+  },
+  "cmd_save_all": {
+    "message": "保存所有标签页",
+    "description": "快捷键说明：保存所有标签页"
+  },
+  "cmd_save_current": {
+    "message": "保存当前标签页",
+    "description": "快捷键说明：保存当前标签页"
+  },
+  "cmd_toggle_sidebar": {
+    "message": "切换侧边栏",
+    "description": "快捷键说明：切换侧边栏"
+  },
+  "cmd_search": {
+    "message": "搜索",
+    "description": "快捷键说明：搜索"
+  },
+  "confirm_yes": {
+    "message": "确定",
+    "description": "确认按钮：是"
+  },
+  "confirm_no": {
+    "message": "取消",
+    "description": "确认按钮：否"
+  },
+  "confirm_cancel": {
+    "message": "取消",
+    "description": "确认按钮：取消"
+  },
+  "confirm_save": {
+    "message": "保存",
+    "description": "确认按钮：保存"
+  },
+  "confirm_undo": {
+    "message": "撤销",
+    "description": "确认按钮：撤销"
+  },
+  "confirm_ok": {
+    "message": "确定",
+    "description": "确认按钮：确定"
+  },
+  "error_storageQuota": {
+    "message": "存储已满",
+    "description": "错误：存储空间配额已满"
+  },
+  "error_dbError": {
+    "message": "数据库错误",
+    "description": "错误：数据库操作失败"
+  },
+  "error_networkError": {
+    "message": "网络错误",
+    "description": "错误：网络请求失败"
+  },
+  "error_invalidUrl": {
+    "message": "无效链接",
+    "description": "错误：无效的 URL 格式"
+  },
+  "error_tokenInvalid": {
+    "message": "令牌无效",
+    "description": "错误：无效的同步令牌"
+  },
+  "tab_edit": {
+    "message": "编辑",
+    "description": "编辑标签页按钮"
+  },
+  "tab_editTitle": {
+    "message": "编辑标签",
+    "description": "编辑标签页弹窗标题"
+  },
+  "empty_noSaved": {
+    "message": "暂无保存的标签页。",
+    "description": "空状态主要提示"
+  },
+  "empty_press": {
+    "message": "按下",
+    "description": "空状态说明第一部分"
+  },
+  "empty_orClick": {
+    "message": "保存所有标签页，或点击上方的保存按钮。",
+    "description": "空状态说明第二部分"
+  },
+  "settings_autoRemove": {
+    "description": "恢复标签后自动从列表中移除",
+    "message": "恢复后移除标签"
+  }
+}

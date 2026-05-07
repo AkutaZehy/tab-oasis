@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body data-theme="system">
+  <div id="popup-app">
+    <header id="popup-header">
+      <h1>Tab Oasis</h1>
+      <span id="popup-tab-count">0 tabs open</span>
+    </header>
+    
+    <div id="popup-actions">
+      <button id="btn-save-all" class="btn-primary" data-i18n="tabAction_saveAll">Save All Tabs</button>
+      <button id="btn-dedup" class="btn-secondary" data-i18n="dedup_label">Remove Duplicates</button>
+    </div>
+    
+    <div id="popup-recent">
+      <h3>Recent Tabs</h3>
+      <div id="popup-recent-list"></div>
+      <div id="popup-no-recent" class="empty">No saved groups yet</div>
+    </div>
+    
+    <footer id="popup-footer">
+      <button id="btn-open-workbench" class="btn-link">Open Tab Oasis</button>
+    </footer>
+  </div>
+  <script src="../lib/utils.js" type="module"></script>
+  <script src="../lib/i18n.js" type="module"></script>
+  <script src="../lib/storage.js" type="module"></script>
+  <script src="../lib/idb.js" type="module"></script>
+  <script src="../lib/db.js" type="module"></script>
+  <script src="popup.js" type="module"></script>
+</body>
+</html>

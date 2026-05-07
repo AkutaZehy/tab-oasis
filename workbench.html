@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="icons/icon-32.png">
+  <link rel="stylesheet" href="workbench.css">
+  <title data-i18n="appName">Tab Oasis</title>
+</head>
+<body data-theme="system">
+
+  <!-- HEADER -->
+  <header id="header">
+    <div id="brand" data-i18n="appName">Tab Oasis</div>
+    <div id="header-actions">
+      <button id="btn-save-all" class="btn-primary" data-i18n="tabAction_saveAll">Save All</button>
+      <button id="btn-new-group" class="btn-secondary" data-i18n="groupAction_create">New Group</button>
+      <button id="btn-dedup" class="btn-secondary" data-i18n="dedup_label">Dedup</button>
+      <button id="btn-theme" class="btn-icon" title="Theme">☀</button>
+      <button id="btn-settings" class="btn-icon" title="Settings">⚙</button>
+    </div>
+    <span id="tab-stats"></span>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+    <div id="tab-groups-container">
+      <div id="empty-state">
+        <p data-i18n="empty_noSaved">No saved tabs yet.</p>
+        <p><span data-i18n="empty_press"></span> <kbd>Ctrl+Q</kbd> <span data-i18n="empty_orClick"></span></p>
+      </div>
+    </div>
+  </main>
+
+  <!-- MODAL -->
+  <div id="modal-overlay" class="hidden">
+    <div id="modal-box">
+      <p id="modal-message"></p>
+      <div id="modal-buttons">
+        <button id="modal-cancel" data-i18n="confirm_cancel">Cancel</button>
+        <button id="modal-confirm" data-i18n="confirm_yes">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SETTINGS -->
+  <div id="settings-overlay" class="hidden">
+    <div id="settings-panel">
+      <h2 data-i18n="settings_label">Settings</h2>
+      <button id="settings-close" class="btn-icon" aria-label="Close">X</button>
+
+      <div class="settings-section">
+        <h3 data-i18n="settings_general">Behavior</h3>
+        <label><input type="checkbox" id="setting-auto-remove"> <span data-i18n="settings_autoRemove">Remove tab after restore</span></label>
+      </div>
+      <div class="settings-section">
+        <h3 data-i18n="sync_label">Cloud Sync</h3>
+        <select id="sync-platform"><option value="github">GitHub</option><option value="gitee">Gitee</option></select>
+        <input id="sync-token" type="password" data-i18n-placeholder="sync_tokenPlaceholder" placeholder="Access Token">
+        <div class="btn-row">
+          <button id="btn-sync-save" class="btn-secondary" data-i18n="confirm_save">Save Token</button>
+          <button id="btn-sync-load" class="btn-secondary" data-i18n="sync_load">Load Token</button>
+        </div>
+        <div class="btn-row">
+          <button id="btn-sync-push" class="btn-primary" data-i18n="sync_push">Push</button>
+          <button id="btn-sync-pull" class="btn-secondary" data-i18n="sync_pull">Pull</button>
+        </div>
+        <span id="sync-status"></span>
+      </div>
+
+      <div class="settings-section">
+        <h3 data-i18n="importExport_label">Import / Export</h3>
+        <div class="btn-row">
+          <button id="btn-export-json" class="btn-secondary" data-i18n="importExport_exportJson">Export JSON</button>
+          <button id="btn-import" class="btn-secondary" data-i18n="importExport_importJson">Import JSON</button>
+        </div>
+        <div class="btn-row">
+          <button id="btn-export-html" class="btn-secondary" data-i18n="importExport_exportHtml">Export HTML</button>
+        </div>
+        <input type="file" id="import-file" accept=".json,.html" hidden>
+      </div>
+
+      <div class="settings-section">
+        <h3 data-i18n="recycle_label">Recycle Bin</h3>
+        <button id="btn-recycle" class="btn-secondary" data-i18n="recycle_label">Open Recycle Bin</button>
+      </div>
+      <p class="version-info">Tab Oasis v1.0.0</p>
+    </div>
+  </div>
+
+  <!-- RECYCLE BIN -->
+  <div id="recycle-overlay" class="hidden">
+    <div id="recycle-panel">
+      <h2 data-i18n="recycle_label">Recycle Bin</h2>
+      <button id="recycle-close" class="btn-icon" aria-label="Close">X</button>
+      <button id="btn-empty-recycle" class="btn-danger" data-i18n="recycle_empty">Empty All</button>
+      <div id="recycle-list"></div>
+      <div id="recycle-empty" data-i18n="recycle_noItems">Recycle bin is empty</div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div id="toast-container"></div>
+
+  <!-- TAB EDIT POPUP -->
+  <div id="tab-edit-overlay" class="hidden">
+    <div id="tab-edit-box">
+      <h3 data-i18n="tab_editTitle">Edit Tab</h3>
+      <label data-i18n="quickLink_titleLabel">Title</label>
+      <input id="tab-edit-title" type="text">
+      <label data-i18n="quickLink_urlLabel">URL</label>
+      <input id="tab-edit-url" type="url">
+      <div class="tab-edit-buttons">
+        <button id="tab-edit-cancel" data-i18n="confirm_cancel">Cancel</button>
+        <button id="tab-edit-save" class="btn-primary" data-i18n="confirm_save">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEMPLATES: group card -->
+  <template id="group-template">
+    <div class="group-card" data-group-id="" draggable="true">
+      <div class="group-header">
+        <button class="btn-icon collapse-btn">▼</button>
+        <img class="group-favicon" src="" width="16" height="16">
+        <span class="group-name"></span>
+        <span class="group-count"></span>
+        <span class="group-date"></span>
+        <div class="group-actions">
+          <button class="btn-icon" data-action="restore-group" data-i18n-title="tabAction_restoreAll">Restore All</button>
+          <button class="btn-icon" data-action="restore-new" data-i18n-title="tabAction_restoreToNewWindow">New Window</button>
+          <button class="btn-icon" data-action="pin-group" data-i18n-title="groupAction_pin">Pin</button>
+          <button class="btn-icon" data-action="lock-group" data-i18n-title="groupAction_lock">Lock</button>
+          <button class="btn-icon" data-action="rename-group" data-i18n-title="groupAction_rename">Rename</button>
+          <button class="btn-icon" data-action="delete-group" data-i18n-title="groupAction_delete">Delete</button>
+        </div>
+      </div>
+      <div class="group-tabs" data-drop-zone="group"></div>
+    </div>
+  </template>
+
+  <!-- TEMPLATES: tab item -->
+  <template id="tab-template">
+    <div class="tab-item" data-tab-url="">
+      <img class="tab-favicon" src="" width="16" height="16" loading="lazy">
+      <a class="tab-link" href="#" target="_blank"></a>
+      <span class="tab-url"></span>
+      <button class="btn-icon" data-action="edit-tab" data-i18n-title="tab_edit">Edit</button>
+      <button class="btn-icon" data-action="remove-tab" data-i18n-title="tabAction_remove">Remove</button>
+    </div>
+  </template>
+
+  <script type="module" src="workbench.js"></script>
+</body>
+</html>

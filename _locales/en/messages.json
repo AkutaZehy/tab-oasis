@@ -1,0 +1,598 @@
+{
+  "appName": {
+    "message": "Tab Oasis",
+    "description": "Extension name"
+  },
+  "appDesc": {
+    "message": "Tab management extension for Firefox",
+    "description": "Extension description"
+  },
+  "action_title": {
+    "message": "Tab Oasis",
+    "description": "Browser action tooltip"
+  },
+  "sidebar_name": {
+    "message": "Tab Oasis",
+    "description": "Sidebar panel title"
+  },
+  "tabAction_saveAll": {
+    "message": "Save All",
+    "description": "Save all tabs button"
+  },
+  "tabAction_saveAllDesc": {
+    "message": "Save and close all tabs",
+    "description": "Save all tabs tooltip description"
+  },
+  "tabAction_saveCurrent": {
+    "message": "Save Current",
+    "description": "Save current tab button"
+  },
+  "tabAction_restore": {
+    "message": "Restore",
+    "description": "Restore a saved tab"
+  },
+  "tabAction_restoreAll": {
+    "message": "Restore All",
+    "description": "Restore all saved tabs"
+  },
+  "tabAction_restoreToNewWindow": {
+    "message": "New Window",
+    "description": "Restore tab to a new window"
+  },
+  "tabAction_remove": {
+    "message": "Remove",
+    "description": "Remove a saved tab"
+  },
+  "tabAction_close": {
+    "message": "Close",
+    "description": "Close action"
+  },
+  "tabAction_open": {
+    "message": "Open",
+    "description": "Open a saved tab"
+  },
+  "tabAction_copyUrl": {
+    "message": "Copy URL",
+    "description": "Copy tab URL to clipboard"
+  },
+  "tabAction_noTabs": {
+    "message": "No saved tabs",
+    "description": "Empty state when no tabs saved"
+  },
+  "tabAction_clear": {
+    "message": "Clear",
+    "description": "Clear all saved tabs"
+  },
+  "groupAction_create": {
+    "message": "New Group",
+    "description": "Create a new tab group"
+  },
+  "groupAction_rename": {
+    "message": "Rename",
+    "description": "Rename a group"
+  },
+  "groupAction_delete": {
+    "message": "Delete",
+    "description": "Delete a group"
+  },
+  "groupAction_deleteConfirm": {
+    "message": "Delete this group?",
+    "description": "Confirmation prompt for group deletion"
+  },
+  "groupAction_pin": {
+    "message": "Pin",
+    "description": "Pin a group to top"
+  },
+  "groupAction_unpin": {
+    "message": "Unpin",
+    "description": "Unpin a group"
+  },
+  "groupAction_lock": {
+    "message": "Lock",
+    "description": "Lock a group"
+  },
+  "groupAction_unlock": {
+    "message": "Unlock",
+    "description": "Unlock a group"
+  },
+  "groupAction_autoGroup": {
+    "message": "Auto Group",
+    "description": "Automatically group tabs"
+  },
+  "groupAction_noGroups": {
+    "message": "No groups",
+    "description": "Empty state when no groups exist"
+  },
+  "groupAction_ungrouped": {
+    "message": "Ungrouped",
+    "description": "Label for ungrouped tabs"
+  },
+  "groupAction_expand": {
+    "message": "Expand",
+    "description": "Expand a group"
+  },
+  "groupAction_collapse": {
+    "message": "Collapse",
+    "description": "Collapse a group"
+  },
+  "quickLink_sectionTitle": {
+    "message": "Quick Links",
+    "description": "Section heading for quick links"
+  },
+  "quickLink_add": {
+    "message": "Add Link",
+    "description": "Add a new quick link"
+  },
+  "quickLink_edit": {
+    "message": "Edit",
+    "description": "Edit a quick link"
+  },
+  "quickLink_titleLabel": {
+    "message": "Title",
+    "description": "Label for quick link title field"
+  },
+  "quickLink_urlLabel": {
+    "message": "URL",
+    "description": "Label for quick link URL field"
+  },
+  "quickLink_urlPlaceholder": {
+    "message": "https://example.com",
+    "description": "Placeholder for quick link URL input"
+  },
+  "quickLink_noLinks": {
+    "message": "No quick links",
+    "description": "Empty state when no quick links exist"
+  },
+  "quickLink_titlePlaceholder": {
+    "message": "Title...",
+    "description": "Placeholder for quick link title input"
+  },
+  "readingList_sectionTitle": {
+    "message": "Reading List",
+    "description": "Section heading for reading list"
+  },
+  "readingList_add": {
+    "message": "Add",
+    "description": "Add item to reading list"
+  },
+  "readingList_notes": {
+    "message": "Notes",
+    "description": "Label for reading list notes"
+  },
+  "readingList_notesPlaceholder": {
+    "message": "Add notes...",
+    "description": "Placeholder for reading list notes input"
+  },
+  "readingList_archive": {
+    "message": "Archive",
+    "description": "Archive a reading list item"
+  },
+  "readingList_unarchive": {
+    "message": "Unarchive",
+    "description": "Unarchive a reading list item"
+  },
+  "readingList_showArchived": {
+    "message": "Show Archived",
+    "description": "Toggle showing archived items"
+  },
+  "readingList_noItems": {
+    "message": "No items",
+    "description": "Empty state when reading list is empty"
+  },
+  "readingList_archived": {
+    "message": "Archived",
+    "description": "Label for archived items"
+  },
+  "readingList_markRead": {
+    "message": "Mark Read",
+    "description": "Mark a reading list item as read"
+  },
+  "todo_sectionTitle": {
+    "message": "Todos",
+    "description": "Section heading for todos"
+  },
+  "todo_addPlaceholder": {
+    "message": "Add todo...",
+    "description": "Placeholder for new todo input"
+  },
+  "todo_clearCompleted": {
+    "message": "Clear Done",
+    "description": "Clear completed todos"
+  },
+  "todo_noTodos": {
+    "message": "No todos",
+    "description": "Empty state when no todos exist"
+  },
+  "todo_completed": {
+    "message": "done",
+    "description": "Label for completed todo items"
+  },
+  "search_placeholder": {
+    "message": "Search tabs...",
+    "description": "Search input placeholder"
+  },
+  "search_noResults": {
+    "message": "No results",
+    "description": "Message shown when search has no results"
+  },
+  "search_allSections": {
+    "message": "All",
+    "description": "Search filter for all sections"
+  },
+  "search_filterTabs": {
+    "message": "Tabs",
+    "description": "Search filter for tabs"
+  },
+  "search_filterGroups": {
+    "message": "Groups",
+    "description": "Search filter for groups"
+  },
+  "search_filterLinks": {
+    "message": "Links",
+    "description": "Search filter for links"
+  },
+  "search_filterReading": {
+    "message": "Reading",
+    "description": "Search filter for reading list"
+  },
+  "search_filterTodos": {
+    "message": "Todos",
+    "description": "Search filter for todos"
+  },
+  "theme_label": {
+    "message": "Theme",
+    "description": "Label for theme setting"
+  },
+  "theme_light": {
+    "message": "Light",
+    "description": "Light theme option"
+  },
+  "theme_dark": {
+    "message": "Dark",
+    "description": "Dark theme option"
+  },
+  "theme_system": {
+    "message": "System",
+    "description": "System theme option"
+  },
+  "sync_label": {
+    "message": "Cloud Sync",
+    "description": "Label for sync section"
+  },
+  "sync_description": {
+    "message": "Sync via GitHub/Gitee Gist",
+    "description": "Sync feature description"
+  },
+  "sync_platform": {
+    "message": "Platform",
+    "description": "Label for sync platform selection"
+  },
+  "sync_token": {
+    "message": "Token",
+    "description": "Label for sync token"
+  },
+  "sync_tokenPlaceholder": {
+    "message": "Access Token",
+    "description": "Placeholder for token input"
+  },
+  "sync_tokenHint": {
+    "message": "Create a token with gist scope",
+    "description": "Hint for creating a sync token"
+  },
+  "sync_syncNow": {
+    "message": "Sync Now",
+    "description": "Button to trigger manual sync"
+  },
+  "sync_syncing": {
+    "message": "Syncing...",
+    "description": "Status text while syncing"
+  },
+  "sync_syncSuccess": {
+    "message": "Synced",
+    "description": "Status text after successful sync"
+  },
+  "sync_syncError": {
+    "message": "Sync failed",
+    "description": "Status text after sync failure"
+  },
+  "sync_autoSync": {
+    "message": "Auto Sync",
+    "description": "Toggle for automatic sync"
+  },
+  "sync_interval": {
+    "message": "Interval",
+    "description": "Label for sync interval setting"
+  },
+  "sync_interval5min": {
+    "message": "5 min",
+    "description": "5 minute sync interval option"
+  },
+  "sync_interval15min": {
+    "message": "15 min",
+    "description": "15 minute sync interval option"
+  },
+  "sync_interval30min": {
+    "message": "30 min",
+    "description": "30 minute sync interval option"
+  },
+  "sync_interval1hr": {
+    "message": "1 hour",
+    "description": "1 hour sync interval option"
+  },
+  "sync_lastSync": {
+    "message": "Last sync:",
+    "description": "Label showing last sync time"
+  },
+  "sync_never": {
+    "message": "Never",
+    "description": "Text shown when sync has never run"
+  },
+  "sync_configureFirst": {
+    "message": "Configure first",
+    "description": "Prompt to configure sync settings first"
+  },
+  "sync_disconnect": {
+    "message": "Disconnect",
+    "description": "Disconnect sync button"
+  },
+  "sync_gistId": {
+    "message": "Gist ID",
+    "description": "Label for Gist ID display"
+  },
+  "sync_save": {
+    "message": "Save Token",
+    "description": "Save sync token button"
+  },
+  "sync_load": {
+    "message": "Read Token",
+    "description": "Read saved sync token button"
+  },
+  "sync_push": {
+    "message": "Gist Push",
+    "description": "Push data to Gist"
+  },
+  "sync_pull": {
+    "message": "Gist Pull",
+    "description": "Pull data from Gist"
+  },
+  "importExport_label": {
+    "message": "Import / Export",
+    "description": "Label for import/export section"
+  },
+  "importExport_exportJson": {
+    "message": "Export JSON",
+    "description": "Export data as JSON"
+  },
+  "importExport_exportHtml": {
+    "message": "Export HTML",
+    "description": "Export as HTML bookmarks"
+  },
+  "importExport_importFile": {
+    "message": "Import File",
+    "description": "Import data from a file"
+  },
+  "importExport_importJson": {
+    "message": "Import JSON",
+    "description": "Import data from JSON"
+  },
+  "importExport_importHtml": {
+    "message": "Import HTML",
+    "description": "Import data from HTML"
+  },
+  "importExport_importing": {
+    "message": "Importing...",
+    "description": "Status text while importing"
+  },
+  "importExport_importSuccess": {
+    "message": "Import done",
+    "description": "Status text after successful import"
+  },
+  "importExport_importError": {
+    "message": "Import failed",
+    "description": "Status text after import failure"
+  },
+  "importExport_mergeQuestion": {
+    "message": "Merge or replace?",
+    "description": "Prompt asking whether to merge or replace data"
+  },
+  "importExport_merge": {
+    "message": "Merge",
+    "description": "Merge import option"
+  },
+  "importExport_replace": {
+    "message": "Replace",
+    "description": "Replace import option"
+  },
+  "recycle_label": {
+    "message": "Recycle Bin",
+    "description": "Label for recycle bin section"
+  },
+  "recycle_restore": {
+    "message": "Restore",
+    "description": "Restore item from recycle bin"
+  },
+  "recycle_deletePermanent": {
+    "message": "Delete Forever",
+    "description": "Permanently delete item from recycle bin"
+  },
+  "recycle_empty": {
+    "message": "Empty All",
+    "description": "Empty entire recycle bin"
+  },
+  "recycle_emptyConfirm": {
+    "message": "Delete all items?",
+    "description": "Confirmation before emptying recycle bin"
+  },
+  "recycle_daysRemaining": {
+    "message": "days left",
+    "description": "Days remaining before auto-deletion"
+  },
+  "recycle_noItems": {
+    "message": "Recycle bin is empty",
+    "description": "Empty state for recycle bin"
+  },
+  "recycle_itemType_tab": {
+    "message": "Tab",
+    "description": "Recycle bin item type label for tab"
+  },
+  "recycle_itemType_group": {
+    "message": "Group",
+    "description": "Recycle bin item type label for group"
+  },
+  "recycle_itemType_link": {
+    "message": "Link",
+    "description": "Recycle bin item type label for link"
+  },
+  "recycle_itemType_reading": {
+    "message": "Reading",
+    "description": "Recycle bin item type label for reading item"
+  },
+  "recycle_itemType_todo": {
+    "message": "Todo",
+    "description": "Recycle bin item type label for todo"
+  },
+  "recycle_restored": {
+    "message": "Restored",
+    "description": "Notification text after restoring item"
+  },
+  "recycle_deleted": {
+    "message": "Deleted",
+    "description": "Notification text after deleting item"
+  },
+  "recycle_back": {
+    "message": "Back",
+    "description": "Button to go back from recycle bin"
+  },
+  "dedup_label": {
+    "message": "Dedup",
+    "description": "Label for duplicate detection feature"
+  },
+  "dedup_found": {
+    "message": "{count} found",
+    "description": "Number of duplicate items found"
+  },
+  "dedup_removed": {
+    "message": "{count} removed",
+    "description": "Number of duplicate items removed"
+  },
+  "dedup_none": {
+    "message": "No duplicates",
+    "description": "Message when no duplicates found"
+  },
+  "settings_label": {
+    "message": "Settings",
+    "description": "Label for settings section"
+  },
+  "settings_general": {
+    "message": "General",
+    "description": "General settings tab"
+  },
+  "settings_keyboardShortcuts": {
+    "message": "Shortcuts",
+    "description": "Keyboard shortcuts settings tab"
+  },
+  "settings_data": {
+    "message": "Data",
+    "description": "Data settings tab"
+  },
+  "settings_about": {
+    "message": "About",
+    "description": "About settings tab"
+  },
+  "settings_newTabMode": {
+    "message": "New Tab Mode",
+    "description": "Setting for new tab behavior"
+  },
+  "settings_closeAfterSave": {
+    "message": "Close after save",
+    "description": "Setting to close tabs after saving"
+  },
+  "settings_language": {
+    "message": "Language",
+    "description": "Language setting label"
+  },
+  "cmd_save_all": {
+    "message": "Save All Tabs",
+    "description": "Keyboard shortcut description for save all tabs"
+  },
+  "cmd_save_current": {
+    "message": "Save Current Tab",
+    "description": "Keyboard shortcut description for save current tab"
+  },
+  "cmd_toggle_sidebar": {
+    "message": "Toggle Sidebar",
+    "description": "Keyboard shortcut description for toggle sidebar"
+  },
+  "cmd_search": {
+    "message": "Search",
+    "description": "Keyboard shortcut description for search"
+  },
+  "confirm_yes": {
+    "message": "OK",
+    "description": "Confirmation button: yes"
+  },
+  "confirm_no": {
+    "message": "No",
+    "description": "Confirmation button: no"
+  },
+  "confirm_cancel": {
+    "message": "Cancel",
+    "description": "Confirmation button: cancel"
+  },
+  "confirm_save": {
+    "message": "Save",
+    "description": "Confirmation button: save"
+  },
+  "confirm_undo": {
+    "message": "Undo",
+    "description": "Confirmation button: undo"
+  },
+  "confirm_ok": {
+    "message": "OK",
+    "description": "Confirmation button: OK"
+  },
+  "error_storageQuota": {
+    "message": "Storage full",
+    "description": "Error: storage quota exceeded"
+  },
+  "error_dbError": {
+    "message": "Database error",
+    "description": "Error: database operation failed"
+  },
+  "error_networkError": {
+    "message": "Network error",
+    "description": "Error: network request failed"
+  },
+  "error_invalidUrl": {
+    "message": "Invalid URL",
+    "description": "Error: invalid URL format"
+  },
+  "error_tokenInvalid": {
+    "message": "Invalid token",
+    "description": "Error: invalid sync token"
+  },
+  "tab_edit": {
+    "message": "Edit",
+    "description": "Edit tab button"
+  },
+  "tab_editTitle": {
+    "message": "Edit Tab",
+    "description": "Edit tab popup title"
+  },
+  "empty_noSaved": {
+    "message": "No saved tabs yet.",
+    "description": "Empty state main message"
+  },
+  "empty_press": {
+    "message": "Press",
+    "description": "Empty state instruction part 1"
+  },
+  "empty_orClick": {
+    "message": "to save all tabs, or click Save All above.",
+    "description": "Empty state instruction part 2"
+  },
+  "settings_autoRemove": {
+    "description": "Auto-remove tab from list when restored",
+    "message": "Remove tab after restore"
+  }
+}

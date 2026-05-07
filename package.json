@@ -1,0 +1,14 @@
+{
+  "name": "tab-oasis",
+  "version": "1.0.0",
+  "description": "Tab Oasis - Firefox Tab Manager",
+  "type": "module",
+  "scripts": {
+    "lint": "web-ext lint",
+    "build": "web-ext build",
+    "test": "npx playwright test"
+  },
+  "dependencies": {
+    "idb": "^8.0.0"
+  }
+}

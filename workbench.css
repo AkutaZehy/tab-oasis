@@ -1,0 +1,399 @@
+/* Tab Oasis — Workbench Stylesheet */
+
+/* ── 1. CSS VARIABLES ── */
+body[data-theme="light"],
+body[data-theme="system"] {
+  --bg: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --bg-hover: #ebebeb;
+  --text: #1a1a1a;
+  --text-secondary: #666666;
+  --text-tertiary: #999999;
+  --accent: #0d9488;
+  --accent-hover: #0f766e;
+  --border: #e0e0e0;
+  --danger: #ef4444;
+  --radius: 6px;
+}
+body[data-theme="dark"] {
+  --bg: #1e1e2e;
+  --bg-secondary: #2a2a3c;
+  --bg-hover: #353550;
+  --text: #cdd6f4;
+  --text-secondary: #a6adc8;
+  --text-tertiary: #6c7086;
+  --accent: #89dceb;
+  --accent-hover: #74c7ec;
+  --border: #45475a;
+  --danger: #f38ba8;
+  --radius: 6px;
+}
+@media (prefers-color-scheme: dark) {
+  body[data-theme="system"] {
+    --bg: #1e1e2e;
+    --bg-secondary: #2a2a3c;
+    --bg-hover: #353550;
+    --text: #cdd6f4;
+    --text-secondary: #a6adc8;
+    --text-tertiary: #6c7086;
+    --accent: #89dceb;
+    --accent-hover: #74c7ec;
+    --border: #45475a;
+    --danger: #f38ba8;
+  }
+}
+
+/* ── 2. RESET ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── 3. BODY ── */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--bg);
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* ── 4. HEADER ── */
+#header {
+  position: sticky; top: 0; z-index: 100;
+  padding: 10px 16px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+}
+#brand { font-weight: 700; font-size: 16px; color: var(--accent); }
+#header-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+#tab-stats { margin-left: auto; font-size: 12px; color: var(--text-tertiary); white-space: nowrap; }
+
+/* ── 5. BUTTONS ── */
+.btn-primary {
+  padding: 8px 16px; background: var(--accent); color: #fff;
+  border: none; border-radius: var(--radius); cursor: pointer;
+  font-size: 13px; font-weight: 500; transition: background 0.15s;
+}
+.btn-primary:hover { background: var(--accent-hover); }
+
+.btn-secondary {
+  padding: 8px 12px; background: transparent; color: var(--text);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  cursor: pointer; font-size: 13px; transition: background 0.15s;
+}
+.btn-secondary:hover { background: var(--bg-hover); }
+
+.btn-danger {
+  padding: 8px 16px; background: var(--danger); color: #fff;
+  border: none; border-radius: var(--radius); cursor: pointer;
+  font-size: 13px; font-weight: 500; transition: opacity 0.15s;
+}
+.btn-danger:hover { opacity: 0.85; }
+
+.btn-icon {
+  width: 28px; height: 28px; display: inline-flex;
+  align-items: center; justify-content: center;
+  border: none; background: transparent; cursor: pointer;
+  border-radius: 4px; color: var(--text-secondary); font-size: 14px;
+  flex-shrink: 0; transition: background 0.15s, color 0.15s;
+}
+.btn-icon:hover { background: var(--bg-hover); color: var(--text); }
+
+/* ── 6. SEARCH ── */
+#search-input {
+  padding: 6px 12px; border: 1px solid var(--border); border-radius: var(--radius);
+  background: var(--bg); color: var(--text); font-size: 13px; width: 200px;
+  outline: none; transition: border-color 0.15s;
+}
+#search-input:focus { border-color: var(--accent); }
+#search-input::placeholder { color: var(--text-tertiary); }
+#search-clear { margin-left: -4px; }
+
+/* ── 7. QUICK LINKS ── */
+#quick-links-section { margin: 0 16px; border-bottom: 1px solid var(--border); }
+
+.section-bar {
+  display: flex; align-items: center; padding: 8px 0; cursor: pointer;
+  gap: 8px; font-size: 13px; font-weight: 500; color: var(--text-secondary);
+}
+.section-bar:hover { color: var(--text); }
+.section-bar .toggle-btn { transition: transform 0.2s; transform: rotate(90deg); margin-left: auto; }
+
+#quick-link-count {
+  font-size: 11px; color: var(--text-tertiary); background: var(--bg-secondary);
+  padding: 1px 6px; border-radius: 10px;
+}
+
+#quick-links-section.collapsed .section-content { display: none; }
+#quick-links-section.collapsed .toggle-btn { transform: rotate(0deg); }
+
+#quick-links-list { display: flex; gap: 6px; padding: 4px 0 8px; flex-wrap: wrap; }
+
+.quick-link {
+  display: flex; align-items: center; gap: 4px; padding: 4px 10px;
+  background: var(--bg-secondary); border-radius: var(--radius);
+  font-size: 12px; cursor: pointer; transition: background 0.15s;
+  text-decoration: none; color: var(--text);
+}
+.quick-link:hover { background: var(--bg-hover); }
+.quick-link img { width: 14px; height: 14px; }
+
+.quick-link .ql-delete { opacity: 0; margin-left: 4px; transition: opacity 0.15s; }
+.quick-link:hover .ql-delete { opacity: 0.6; }
+.quick-link .ql-delete:hover { opacity: 1 !important; }
+
+#quick-link-add-form { display: flex; gap: 4px; padding: 4px 0 8px; }
+#quick-link-add-form input {
+  flex: 1; padding: 4px 8px; border: 1px solid var(--border);
+  border-radius: var(--radius); background: var(--bg); color: var(--text);
+  font-size: 12px; outline: none;
+}
+#quick-link-add-form input:focus { border-color: var(--accent); }
+#quick-link-add-form button {
+  padding: 4px 12px; background: var(--accent); color: #fff;
+  border: none; border-radius: var(--radius); cursor: pointer;
+  font-size: 14px; font-weight: 500;
+}
+#quick-link-add-form button:hover { background: var(--accent-hover); }
+
+/* ── 8. MAIN CONTENT ── */
+#main-content { padding: 16px; max-width: 1200px; margin: 0 auto; }
+#tab-groups-container { display: flex; flex-direction: column; }
+
+/* ── 9. TAB GROUPS ── */
+.group-card {
+  margin-bottom: 16px; border: 1px solid var(--border);
+  border-radius: var(--radius); background: var(--bg-secondary);
+  overflow: hidden; transition: box-shadow 0.15s;
+}
+.group-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.group-card[data-pinned="1"] { border-left: 3px solid var(--accent); }
+.group-card[data-locked="1"] { border-left: 3px solid var(--danger); }
+
+.group-header {
+  display: flex; align-items: center; padding: 8px 12px; gap: 8px;
+  cursor: pointer; user-select: none; transition: background 0.15s;
+}
+.group-header:hover { background: var(--bg-hover); }
+.group-header .collapse-btn { transition: transform 0.2s; }
+
+.group-name {
+  font-weight: 600; font-size: 14px; flex: 1; min-width: 0;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--text);
+}
+.group-name[contenteditable="true"] {
+  background: var(--bg); outline: 2px solid var(--accent);
+  border-radius: 4px; padding: 0 4px;
+}
+
+.group-count {
+  font-size: 12px; color: var(--text-tertiary); background: var(--bg);
+  padding: 2px 8px; border-radius: 10px; flex-shrink: 0;
+}
+.group-date { font-size: 11px; color: var(--text-tertiary); margin-right: auto; flex-shrink: 0; }
+
+.group-actions {
+  display: flex; gap: 2px; opacity: 0.3; flex-shrink: 0; transition: opacity 0.15s;
+}
+.group-header:hover .group-actions { opacity: 1; }
+
+.group-card.collapsed .group-tabs { display: none; }
+.group-card.collapsed .collapse-btn { transform: rotate(-90deg); }
+.group-tabs { padding: 0 8px 8px; min-height: 24px; transition: background 0.15s; }
+.group-tabs.drag-over { background: var(--bg-hover); outline: 2px dashed var(--accent); outline-offset: -2px; border-radius: 4px; }
+
+/* ── 10. TAB ITEM ── */
+.tab-item {
+  display: flex; align-items: center; padding: 5px 10px; gap: 8px;
+  border-radius: 4px; cursor: default; transition: background 0.1s;
+}
+.tab-item:hover { background: var(--bg-hover); }
+
+.tab-favicon { width: 16px; height: 16px; flex-shrink: 0; border-radius: 2px; }
+
+.tab-link {
+  flex: 1; font-size: 13px; color: var(--text); text-decoration: none;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0;
+}
+.tab-link:hover { color: var(--accent); text-decoration: underline; }
+
+.tab-url {
+  font-size: 11px; color: var(--text-tertiary); max-width: 200px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex-shrink: 1;
+}
+
+.tab-edit,
+.tab-remove { opacity: 0; flex-shrink: 0; transition: opacity 0.15s; font-size: 12px; }
+.tab-item:hover .tab-edit,
+.tab-item:hover .tab-remove { opacity: 0.4; }
+.tab-edit:hover,
+.tab-remove:hover { opacity: 1 !important; }
+.tab-remove:hover { color: var(--danger); }
+.tab-edit:hover { color: var(--accent); }
+
+/* ── 11. EMPTY STATE ── */
+#empty-state { text-align: center; padding: 60px 20px; color: var(--text-tertiary); }
+#empty-state p { margin-bottom: 8px; font-size: 15px; }
+#empty-state kbd {
+  background: var(--bg-secondary); border: 1px solid var(--border);
+  padding: 2px 6px; border-radius: 3px; font-size: 13px; font-family: inherit;
+}
+
+/* ── 12. MODAL ── */
+#modal-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 500;
+  display: flex; align-items: center; justify-content: center;
+}
+#modal-box {
+  background: var(--bg); border-radius: var(--radius); padding: 24px;
+  max-width: 400px; width: 90%; box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+}
+#modal-message { margin-bottom: 16px; font-size: 14px; color: var(--text); }
+#modal-buttons { display: flex; justify-content: flex-end; gap: 8px; }
+
+#modal-cancel {
+  padding: 8px 16px; background: transparent; color: var(--text);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  cursor: pointer; font-size: 13px; transition: background 0.15s;
+}
+#modal-cancel:hover { background: var(--bg-hover); }
+
+#modal-confirm {
+  padding: 8px 16px; background: var(--accent); color: #fff;
+  border: none; border-radius: var(--radius); cursor: pointer;
+  font-size: 13px; font-weight: 500; transition: background 0.15s;
+}
+#modal-confirm:hover { background: var(--accent-hover); }
+
+/* ── 13. SETTINGS & RECYCLE OVERLAYS ── */
+#settings-overlay,
+#recycle-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.3); z-index: 400;
+  display: flex; justify-content: flex-end;
+}
+#recycle-overlay { justify-content: center; align-items: center; }
+
+#settings-panel,
+#recycle-panel {
+  background: var(--bg); width: 360px; max-width: 90vw; height: 100%;
+  overflow-y: auto; padding: 20px; box-shadow: -4px 0 20px rgba(0,0,0,0.15);
+}
+#recycle-panel {
+  height: auto; max-height: 80vh; border-radius: var(--radius);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+}
+
+#settings-panel,
+#recycle-panel { position: relative; }
+#settings-panel h2,
+#recycle-panel h2 {
+  font-size: 16px; font-weight: 600; margin-bottom: 16px;
+  padding-right: 36px; color: var(--text);
+}
+#settings-close,
+#recycle-close { position: absolute; top: 20px; right: 20px; }
+
+.settings-section { margin-bottom: 16px; }
+.settings-section h3 {
+  font-size: 12px; text-transform: uppercase; color: var(--text-secondary);
+  margin-bottom: 8px; letter-spacing: 0.5px;
+}
+.settings-section input,
+.settings-section select {
+  width: 100%; padding: 8px; border: 1px solid var(--border);
+  border-radius: var(--radius); background: var(--bg); color: var(--text);
+  font-size: 13px; margin-bottom: 6px; outline: none;
+}
+.settings-section input:focus,
+.settings-section select:focus { border-color: var(--accent); }
+
+.settings-section button { margin-bottom: 6px; margin-right: 6px; }
+
+#sync-status {
+  font-size: 12px; color: var(--text-tertiary);
+  display: inline-block; vertical-align: middle;
+}
+
+.version-info {
+  margin-top: 24px; padding-top: 12px; border-top: 1px solid var(--border);
+  font-size: 12px; color: var(--text-tertiary); text-align: center;
+}
+
+/* ── 14. TOAST ── */
+#toast-container {
+  position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+  z-index: 600; display: flex; flex-direction: column; gap: 8px;
+  align-items: center; pointer-events: none;
+}
+.toast {
+  padding: 10px 20px; background: var(--text); color: var(--bg);
+  border-radius: var(--radius); font-size: 13px;
+  animation: toastIn 0.3s ease; pointer-events: auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.toast.success { border-left: 3px solid #22c55e; }
+.toast.error { border-left: 3px solid var(--danger); }
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── 15. HIDDEN ── */
+.hidden { display: none !important; }
+
+/* ── 16. SCROLLBAR ── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-tertiary); }
+html { scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
+
+/* ── 17. RECYCLE LIST ── */
+#btn-empty-recycle { margin-bottom: 12px; }
+#recycle-list { display: flex; flex-direction: column; gap: 4px; }
+
+.recycle-item {
+  display: flex; align-items: center; padding: 6px 10px; gap: 8px;
+  border-radius: var(--radius); background: var(--bg-secondary);
+  font-size: 13px; transition: background 0.15s;
+}
+.recycle-item:hover { background: var(--bg-hover); }
+
+.recycle-item .recycle-name {
+  flex: 1; min-width: 0; white-space: nowrap; overflow: hidden;
+  text-overflow: ellipsis; color: var(--text);
+}
+.recycle-item .recycle-date {
+  font-size: 11px; color: var(--text-tertiary); flex-shrink: 0;
+}
+.recycle-item .recycle-tab-count {
+  font-size: 11px; color: var(--text-tertiary); background: var(--bg);
+  padding: 1px 6px; border-radius: 10px; flex-shrink: 0;
+}
+.recycle-item .recycle-actions {
+  display: flex; gap: 2px; flex-shrink: 0; opacity: 0.4; transition: opacity 0.15s;
+}
+.recycle-item:hover .recycle-actions { opacity: 1; }
+
+#recycle-empty { text-align: center; padding: 20px; color: var(--text-tertiary); font-size: 13px; }
+
+/* ── 18. TAB EDIT POPUP ── */
+#tab-edit-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 550; display: flex; align-items: center; justify-content: center; }
+#tab-edit-box { background: var(--bg); border-radius: var(--radius); padding: 20px; width: 380px; max-width: 90vw; }
+#tab-edit-box h3 { margin: 0 0 12px; font-size: 16px; }
+#tab-edit-box label { display: block; font-size: 12px; color: var(--text-secondary); margin: 8px 0 4px; }
+#tab-edit-box input { width: 100%; padding: 8px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg); color: var(--text); font-size: 13px; }
+#tab-edit-box input:focus { border-color: var(--accent); outline: none; }
+.tab-edit-buttons { display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px; }
+#tab-edit-cancel { padding: 6px 14px; background: transparent; border: 1px solid var(--border); border-radius: var(--radius); cursor: pointer; color: var(--text); }
+#tab-edit-cancel:hover { background: var(--bg-hover); }
+/* Settings btn-row */
+.btn-row { display: flex; gap: 6px; margin-bottom: 6px; }
+.btn-row .btn-secondary { flex: 1; }
+
+/* Group action text buttons */
+.group-actions .btn-icon { font-size: 11px; width: auto; height: auto; padding: 2px 6px; border-radius: 4px; }
+.group-actions .btn-icon:hover { background: var(--bg-hover); }
+.tab-item .btn-icon { font-size: 11px; width: auto; height: auto; padding: 2px 6px; border-radius: 4px; }
+.settings-section input[type=checkbox] { width: auto; margin: 0; accent-color: var(--accent); }
